@@ -1,0 +1,19 @@
+//light
+$text-light: hsl(255, 36%, 17%);
+$accent1-light: hsl(175, 100%, 31%);
+$accent2-light: hsl(21, 84%, 56%);
+$accent3-light: hsl(40, 89%, 65%);
+$bkg1-light: hsl(0, 0%, 100%);
+$bkg2-light: hsl(26, 37%, 96%);
+$shadow-light: 20px 20px 50px hsl(255, 36%, 17%, 0.35),
+  -30px -30px 50px hsl(26, 37%, 96%, 0.15);
+
+//dark
+$text-dark: hsl(217, 54.2%, 88%);
+$accent1-dark: hsl(175, 100%, 31%);
+$accent2-dark: hsl(21, 84%, 56%);
+$accent3-dark: hsl(40, 89%, 65%);
+$bkg1-dark: hsl(218, 15.4%, 10.2%);
+$bkg2-dark: hsl(218, 14.7%, 18.7%);
+$shadow-dark: 20px 20px 50px hsl(255, 36%, 17%, 0.35),
+  -30px -30px 50px hsl(26, 37%, 26%, 0.15);

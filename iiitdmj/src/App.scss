@@ -1,0 +1,10 @@
+@import './styles/theme';
+.app {
+  height: 100vh;
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  @include themed() {
+    color: t('text');
+    background: t('bkg1');
+  }
+}

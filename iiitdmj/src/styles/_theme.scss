@@ -1,0 +1,44 @@
+@import './variables';
+$themes: (
+  light: (
+    text: $text-light,
+    accent1: $accent1-light,
+    accent2: $accent2-light,
+    accent3: $accent3-light,
+    bkg1: $bkg1-light,
+    bkg2: $bkg2-light,
+    shadow: $shadow-light,
+  ),
+  dark: (
+    text: $text-dark,
+    accent1: $accent1-dark,
+    accent2: $accent2-dark,
+    accent3: $accent3-dark,
+    bkg1: $bkg1-dark,
+    bkg2: $bkg2-dark,
+    shadow: $shadow-dark,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
