@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC } from "react";
 import ThemeContext, { initialThemeState } from "./ThemeContexts";
 
-const ThemeProvider = ({ children }) => {
+const ThemeProvider: FC<any> = ({children}) => {
   const [theme, setTheme] = useState(initialThemeState.theme);
 
   const localStorage = window.localStorage;
@@ -19,7 +19,7 @@ const ThemeProvider = ({ children }) => {
   }, [theme,localStorage]);
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme}}>
       <div className={`theme--${theme}`}>{children}</div>
     </ThemeContext.Provider>
   );

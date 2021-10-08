@@ -5,17 +5,17 @@ import {ReactComponent as Dark} from '../../assets/moon.svg'
 import './ThemeSetter.scss'
 export default function ThemeSetter() {
   const { theme, setTheme } = useContext(ThemeContext);
-  const lightRef=useRef(null);
-  const darkRef=useRef(null);
+  const lightRef=useRef<HTMLAudioElement>(null);
+  const darkRef=useRef<HTMLAudioElement>(null);
   const ChangeTheme=()=>{
     if(theme==='light'){
       setTheme('dark');
-      lightRef.current.currentTime = 0;
-      lightRef.current.play();
+      lightRef.current!.currentTime = 0;
+      lightRef.current!.play();
     }
     else {
-      darkRef.current.currentTime = 0;
-      darkRef.current.play();
+      darkRef.current!.currentTime = 0;
+      darkRef.current!.play();
       setTheme('light')
     }
   }

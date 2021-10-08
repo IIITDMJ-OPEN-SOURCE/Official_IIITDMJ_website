@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import ThemeSetter from "./components/ThemeSetter/ThemeSetter.jsx";
+import ThemeSetter from "./components/ThemeSetter/ThemeSetter.tsx";
 function App() {
   return (
     <>
