@@ -1,10 +1,14 @@
-import './App.css';
-
+import React from 'react';
+import './App.scss';
+import ThemeSetter from "./components/ThemeSetter/ThemeSetter.jsx";
 function App() {
   return (
-    <div className="App">
-    
-    </div>
+    <>
+     <ThemeSetter />
+      <div className="app">
+        Hi there
+      </div>
+    </>
   );
 }
 
