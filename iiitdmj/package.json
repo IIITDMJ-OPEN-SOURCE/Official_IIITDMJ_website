@@ -25,7 +25,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format-js": "prettier-eslint --write \"src/**/*.js\"",
+    "format-ts": "prettier-eslint --write \"src/**/*.ts\"",
+    "format-tsx": "prettier-eslint --write \"src/**/*.tsx\"",
+    "format-scss": "prettier-eslint --write \"src/**/*.scss\"",
+    "format-html": "prettier-eslint --write \"public/**/*.html\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier-eslint-cli": "^5.0.1"
   }
 }

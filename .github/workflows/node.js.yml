@@ -27,3 +27,9 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - run: npm run format-js
+    - run: npm run format-ts
+    - run: npm run format-tsx
+    - run: npm run format-html
+    - run: npm run format-scss
+
